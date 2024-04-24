@@ -32,10 +32,10 @@ def home_page():
     st.markdown("---")
     
     st.header("Meet the Team")
-    st.write("**Project Lead:** Manas Pandey")
-    st.write("**Data Scientist:** Mayuresh Harihar")
-    st.write("**Software Engineer:** Mangesh Raj")
-    st.write("**Software Engineer:** Sahil Khangar")
+    st.write(" Manas Pandey")
+    st.write(" Mayuresh Harihar")
+    st.write(" Mangesh Raj")
+    st.write(" Sahil Khangar")
 
 # Main function to run the Streamlit app
 def main():
