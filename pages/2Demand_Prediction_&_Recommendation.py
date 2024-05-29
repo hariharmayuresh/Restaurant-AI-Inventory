@@ -63,7 +63,8 @@ def process(day, holiday, weather):
     input_data = pd.DataFrame({'Day of the week': [day], 'Holiday': [holiday], 'Weather Condition': [weather]})
     input_data_transformed = column_transformer.transform(input_data)
     predictions = model.predict_proba(input_data_transformed)
-    top_two_indices = predictions[0].argsort()[-2:][::-1]  # Get indices of top 2 predictions
+    top_two_indices =predictions[0].argsort()[-3:][::-1]
+    #top_two_indices = predictions[0].argsort()[-2:][::-1]  # Get indices of top 2 predictions
     return model.classes_[top_two_indices]
 
 # Create Streamlit app
@@ -78,8 +79,8 @@ def main():
     # Predict top two menu items based on user inputs
     top_two_menu_items = process(day, holiday, weather)
     
-    if st.button("Predict"):
-        st.header(f"Predicted Menu Items: {top_two_menu_items[0]}, {top_two_menu_items[1]}")
+    if st.button("Demand Prediction"):
+        st.header(f"Predicted Menu Items: {top_two_menu_items[0]}, {top_two_menu_items[1]},{top_two_menu_items[2]}")
     st.markdown("---")
 
     # Find common items between in-demand predictions and possible menu items
@@ -90,18 +91,19 @@ def main():
     if st.button("Recommendation Module"):
         st.title("Menu Item Recommendation Based on Current Inventory and Demand Prediction")
         
-    if st.button("Predict Demand and Recommend"):
-        st.subheader(f"Predicted Menu Items: {top_two_menu_items[0]}, {top_two_menu_items[1]}")
+    if st.button("Recommend Menu Items"):
+        st.subheader(f"Demand Predicted Menu Items: {top_two_menu_items[0]}, {top_two_menu_items[1]}, {top_two_menu_items[2]}")
         
         if recommended_items:
-            st.header("Recommended Menu Items:")
+            st.header("Recommended Menu Items  (Based on current Inventory):")
             st.subheader(recommended_items_str)
         else:
-            st.write("No recommendation based on current inventory and demand prediction.")
+            st.write("No Recommendation based on current inventory and Demand Prediction.")
         
     st.markdown("---")
             
     if st.button("Predict All Possible Menu Items based on Current Inventory"):
+        st.title("All Possible Menu Items based on Current Inventory")
         st.table(predicted_menu_items)
 
 if __name__ == "__main__":
