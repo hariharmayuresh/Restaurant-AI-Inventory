@@ -18,6 +18,8 @@ st.title("Inventory Alert Mechanism")
 st.header('Inventory Data')
 st.write(inventory_df)
 
+st.markdown("---")
+
 # Streamlit app
 st.header("Check your Inventory")
 
@@ -26,6 +28,9 @@ ingredient_name = st.selectbox("Select Ingredient Name:", inventory_df['Ingredie
 
 # Numeric input for current quantity used
 current_quantity_used = st.number_input("Enter Quantity Used:", min_value=0, value=0, step=1)
+
+# Display 'Used By' information
+used_by = inventory_df[inventory_df['Ingredient Name'] == ingredient_name]['Used By'].values[0]
 
 # Button to check inventory and generate alert
 if st.button("Update Inventory"):
@@ -38,12 +43,20 @@ if st.button("Update Inventory"):
     # Get the threshold quantity (25% of the listed quantity)
     threshold_quantity = current_inventory_quantity * 0.25
     
+    
+    
     # Check if remaining quantity is below the threshold
     if remaining_quantity < threshold_quantity:
-        st.error(f"Alert: Inventory for {ingredient_name} is below the threshold at {remaining_quantity} units. Threshold is {threshold_quantity} units.")
+        # st.error(f"Alert: Inventory for {ingredient_name} is below the threshold at {remaining_quantity} units. Threshold is {threshold_quantity} units.")
+        st.error(f"Alert: Inventory for {ingredient_name} is below the threshold at {remaining_quantity} units.")
+        st.error(f"Threshold is {threshold_quantity} units.")
+        st.error(f"Used By: {used_by}")
     else:
-        st.success(f"Inventory level for {ingredient_name} is above the threshold. Remaining quantity is {remaining_quantity} units. Threshold is {threshold_quantity} units.")
-    
+        #st.success(f"Inventory level for {ingredient_name} is above the threshold. Remaining quantity is {remaining_quantity} units. Threshold is {threshold_quantity} units.")
+        st.success(f"Inventory level for {ingredient_name} is above the threshold.")
+        st.success(f"Remaining quantity is {remaining_quantity} units.") 
+        st.success(f"Threshold is {threshold_quantity} units.")   
+        st.success(f"Used By: {used_by}")
     # Display 'Used By' information
-    used_by = inventory_df[inventory_df['Ingredient Name'] == ingredient_name]['Used By'].values[0]
-    st.write(f"Used By: {used_by}")
+    # used_by = inventory_df[inventory_df['Ingredient Name'] == ingredient_name]['Used By'].values[0]
+    # st.success(f"Used By: {used_by}")

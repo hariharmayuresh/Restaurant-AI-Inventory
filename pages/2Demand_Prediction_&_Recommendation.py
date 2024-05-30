@@ -80,7 +80,9 @@ def main():
     top_two_menu_items = process(day, holiday, weather)
     
     if st.button("Demand Prediction"):
-        st.header(f"Predicted Menu Items: {top_two_menu_items[0]}, {top_two_menu_items[1]},{top_two_menu_items[2]}")
+        #st.subheader(f"Predicted Menu Items: {top_two_menu_items[0]}, {top_two_menu_items[1]},{top_two_menu_items[2]}")
+        st.subheader("Predicted Menu Items:")
+        st.success(f' {top_two_menu_items[0]}, {top_two_menu_items[1]}, {top_two_menu_items[2]}')
     st.markdown("---")
 
     # Find common items between in-demand predictions and possible menu items
@@ -92,13 +94,14 @@ def main():
         st.title("Menu Item Recommendation Based on Current Inventory and Demand Prediction")
         
     if st.button("Recommend Menu Items"):
-        st.subheader(f"Demand Predicted Menu Items: {top_two_menu_items[0]}, {top_two_menu_items[1]}, {top_two_menu_items[2]}")
+        st.subheader("Predicted Menu Items:")
+        st.success(f' {top_two_menu_items[0]}, {top_two_menu_items[1]}, {top_two_menu_items[2]}')
         
         if recommended_items:
-            st.header("Recommended Menu Items  (Based on current Inventory):")
-            st.subheader(recommended_items_str)
+            st.subheader("Recommended Menu Items (Based on current Inventory):")
+            st.success(recommended_items_str)
         else:
-            st.write("No Recommendation based on current inventory and Demand Prediction.")
+            st.error("No Recommendation based on current inventory and Demand Prediction.")
         
     st.markdown("---")
             

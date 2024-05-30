@@ -22,6 +22,8 @@ def main():
     st.title('Historical Sales Data')
     st.write(df_s)
     
+    st.markdown("---")
+    
     st.title('Inventory Data')
     st.write(df_i)
     
