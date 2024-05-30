@@ -19,12 +19,12 @@ df_i = pd.read_csv(INVENTORY_DATA_PATH)
 
 def main():
     
-    st.title('Historical Sales Data')
+    st.title(':blue[Historical Sales Data]')
     st.write(df_s)
     
     st.markdown("---")
     
-    st.title('Inventory Data')
+    st.title(':blue[Inventory Data]')
     st.write(df_i)
     
     

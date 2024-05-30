@@ -69,20 +69,20 @@ def process(day, holiday, weather):
 
 # Create Streamlit app
 def main():
-    st.title("Menu Item Demand Prediction")
+    st.title(":blue[Menu Item Demand Prediction]")
 
     # User inputs
-    day = st.selectbox("Day of the Week:", ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'])
-    holiday = st.selectbox("Holiday:", ["New Year's Day", 'NO', 'Weekend', 'Pongal', 'Makar Sankranti', 'Republic Day', "Valentine's Day", 'Holi', 'Gudi Padwa', "April Fools' Day", 'Ram Navami', 'Good Friday', 'Easter Sunday', 'Ambedkar Jayanti', 'Hanuman Jayanti', 'Buddha Purnima', 'May Day', "Mother's Day", 'Eid al-Fitr', "Father's Day", 'Bakri Id', 'Raksha Bandhan', 'Janmashtami', 'Independence Day','Ganesh Chaturthi', 'Onam', 'Hindi Diwas', 'Navratri'])
-    weather = st.selectbox("Weather Condition:", ['Clear', 'Foggy', 'Rainy'])
+    day = st.selectbox("**Day of the Week:**", ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'])
+    holiday = st.selectbox("**Holiday:**", ["New Year's Day", 'NO', 'Weekend', 'Pongal', 'Makar Sankranti', 'Republic Day', "Valentine's Day", 'Holi', 'Gudi Padwa', "April Fools' Day", 'Ram Navami', 'Good Friday', 'Easter Sunday', 'Ambedkar Jayanti', 'Hanuman Jayanti', 'Buddha Purnima', 'May Day', "Mother's Day", 'Eid al-Fitr', "Father's Day", 'Bakri Id', 'Raksha Bandhan', 'Janmashtami', 'Independence Day','Ganesh Chaturthi', 'Onam', 'Hindi Diwas', 'Navratri'])
+    weather = st.selectbox("**Weather Condition:**", ['Clear', 'Foggy', 'Rainy'])
     
     # Predict top two menu items based on user inputs
     top_two_menu_items = process(day, holiday, weather)
     
-    if st.button("Demand Prediction"):
+    if st.button("**:green-background[:green[Demand Prediction]]**"):
         #st.subheader(f"Predicted Menu Items: {top_two_menu_items[0]}, {top_two_menu_items[1]},{top_two_menu_items[2]}")
         st.subheader("Predicted Menu Items:")
-        st.success(f' {top_two_menu_items[0]}, {top_two_menu_items[1]}, {top_two_menu_items[2]}')
+        st.success(f'**{top_two_menu_items[0]}, {top_two_menu_items[1]}, {top_two_menu_items[2]}**')
     st.markdown("---")
 
     # Find common items between in-demand predictions and possible menu items
@@ -90,23 +90,23 @@ def main():
     recommended_items = set_menu_items.intersection(predicted_menu_items)
     recommended_items_str = ', '.join(recommended_items)
     
-    if st.button("Recommendation Module"):
-        st.title("Menu Item Recommendation Based on Current Inventory and Demand Prediction")
+    if st.button("**:green-background[:green[Recommendation Module]]**"):
+        st.title(":blue[Menu Item Recommendation Based on Current Inventory and Demand Prediction]")
         
-    if st.button("Recommend Menu Items"):
+    if st.button("**:green-background[:green[Recommend Menu Items]]**"):
         st.subheader("Predicted Menu Items:")
-        st.success(f' {top_two_menu_items[0]}, {top_two_menu_items[1]}, {top_two_menu_items[2]}')
+        st.success(f'**{top_two_menu_items[0]}, {top_two_menu_items[1]}, {top_two_menu_items[2]}**')
         
         if recommended_items:
             st.subheader("Recommended Menu Items (Based on current Inventory):")
-            st.success(recommended_items_str)
+            st.success(f"**{recommended_items_str}**")
         else:
             st.error("No Recommendation based on current inventory and Demand Prediction.")
         
     st.markdown("---")
             
-    if st.button("Predict All Possible Menu Items based on Current Inventory"):
-        st.title("All Possible Menu Items based on Current Inventory")
+    if st.button("**:green-background[:green[Predict All Possible Menu Items based on Current Inventory]]**"):
+        st.title(":blue[All Possible Menu Items based on Current Inventory]")
         st.table(predicted_menu_items)
 
 if __name__ == "__main__":

@@ -19,11 +19,11 @@ def analyze_sentiment(text):
     else:
         return 'Negative'
 
-st.title("Feedback Analysis")
+st.title(":blue[Feedback Analysis]")
 
 # Feedback section
-feedback_text = st.text_area("Enter your comment or feedback:", height=150)
-submit_button = st.button("Submit Feedback")
+feedback_text = st.text_area("**Enter your comment or feedback:**", height=150)
+submit_button = st.button("**:green-background[:green[Submit Feedback]]**")
 
 if submit_button:
     if feedback_text:
@@ -32,15 +32,15 @@ if submit_button:
 
         # Optionally, store or process the feedback based on sentiment
         if sentiment == "Positive":
-            st.success(f"Feedback Type: {sentiment}")
-            st.success("Thank you for your positive feedback!")
+            st.success(f"**:green[Feedback Type: {sentiment}]**")
+            st.success("**:green[Thank you for your positive feedback!]**")
         elif sentiment == "Neutral":
-            st.warning(f"Feedback Type: {sentiment}")
+            st.warning(f"**:orange[Feedback Type: {sentiment}]**")
             st.warning("We apologize for any inconvenience. Suggest some recommendations")
         elif sentiment == "Negative":
-            st.error(f"Feedback Type: {sentiment}")
-            st.error("We apologize for any inconvenience. Please let us know how we can improve.")
+            st.error(f"**:red[Feedback Type: {sentiment}]**")
+            st.error("**:red[We apologize for any inconvenience. Please let us know how we can improve.]**")
         else:
             st.info("Thank you for your feedback!")
     else:
-        st.warning("Please enter some feedback before submitting.")
+        st.warning("**:orange[Please enter some feedback before submitting.]**")
