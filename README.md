@@ -49,10 +49,6 @@ The rising levels of food waste and inefficiencies in restaurant supply chains c
 
 ---
 
-## 📁 Files Included
-
----
-
 ## 🛠️ Tools & Tech Used
 
 - **Python**  
@@ -68,7 +64,7 @@ The rising levels of food waste and inefficiencies in restaurant supply chains c
 
 ## 🧠 Use Cases
 
-- 🍴 Restaurants predicting demand based on weekday, holiday, and weather
+- 🍴 Restaurants planning menus based on daily/seasonal demand  
 - 📉 Prevent overproduction by aligning inventory with predictions
 - 🔔 Inventory teams alerted in real-time about low stock or expiry
 - 📬 Feedback analysis helps management understand operational gaps
