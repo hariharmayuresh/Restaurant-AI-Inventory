@@ -51,3 +51,37 @@ The rising levels of food waste and inefficiencies in restaurant supply chains c
 
 ## 📁 Files Included
 
+---
+
+## 🛠️ Tools & Tech Used
+
+- **Python**  
+- **Streamlit** – Web app framework  
+- **Scikit-learn** – ML model training  
+- **Pandas / NumPy** – Data processing  
+- **NLP** – TF-IDF, Bag-of-Words  
+- **Matplotlib / Seaborn** – Visualizations  
+- **Git & GitHub** – Version control  
+- **Google Colab / VS Code** – Development environment
+
+---
+
+## 🧠 Use Cases
+
+- 🍴 Restaurants predicting demand based on weekday, holiday, and weather
+- 📉 Prevent overproduction by aligning inventory with predictions
+- 🔔 Inventory teams alerted in real-time about low stock or expiry
+- 📬 Feedback analysis helps management understand operational gaps
+
+---
+
+## 🙌 Acknowledgments
+
+- 🌱 Inspired by real-world challenges in restaurant operations and food waste management
+- Special thanks to the open-source community, and Streamlit documentation for their invaluable support and inspiration throughout the development process.
+
+
+
+
+
+
