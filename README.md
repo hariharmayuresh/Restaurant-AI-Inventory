@@ -2,7 +2,7 @@
 
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![Built With](https://img.shields.io/badge/Built%20with-Python%2C%20Streamlit-blue)
-![ML Models](https://img.shields.io/badge/Models-Random%20Forest%2C%20Isolation%20Forest%2C%20NLP-yellow)
+![ML Models](https://img.shields.io/badge/Models-Random%20Forest%2C%20NLP-yellow)
 ![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
 
 ---
