@@ -9,7 +9,7 @@
 
 ## 📌 Project Summary
 
-An AI-powered web application designed to reduce food waste and optimize inventory management for restaurants. This system intelligently forecasts demand, recommends menu items based on stock, detects anomalies, and performs real-time feedback analysis. It brings together **machine learning**, **natural language processing**, and an **interactive web interface** to drive efficient, sustainable operations in the food service industry.
+An AI-powered web application designed to reduce food waste and optimize inventory management for restaurants. This system intelligently forecasts demand, recommends menu items based on stock, alert mechanism, and performs real-time feedback analysis. It brings together **machine learning**, **natural language processing**, and an **interactive web interface** to drive efficient, sustainable operations in the food service industry.
 
 ---
 
