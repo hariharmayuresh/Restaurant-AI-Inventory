@@ -31,11 +31,9 @@ def home_page():
     
     st.markdown("---")
     
-    st.header("Meet the Team")
+    st.header("👤 Developed By")
     st.write("**Mayuresh Harihar**")
-    st.write(" **Manas Pandey**")
-    st.write(" **Mangesh Raj**")
-    st.write(" **Sahil Khangar**")
+    st.markdown("Built as a solo project to explore AI-driven inventory optimization for restaurants.")
 
 # Main function to run the Streamlit app
 def main():
