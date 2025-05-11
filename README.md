@@ -27,25 +27,24 @@ The rising levels of food waste and inefficiencies in restaurant supply chains c
 
 ## 👨‍💻 What I Did
 
-- 📊 Collected, cleaned, and preprocessed real-world restaurant inventory & sales data  
-- 🧠 Built & trained ML models: **Random Forest**, **Collaborative Filtering**, **Isolation Forest**  
+- 📊 Collected and cleaned 5,000+ rows of restaurant sales data, including weather and holiday features  
+- 🧠 Built & trained ML models: Random Forest with 85%+ accuracy in menu demand prediction and < 5.5 MAE on unseen data
+- 🗂️ Designed a 4-module system: Demand Prediction, Menu Recommendation, Alerts, and Feedback Analysis  
 - 🔍 Developed demand prediction engine factoring in holidays, weekdays & weather  
-- 🤖 Designed a recommendation engine based on predicted demand + inventory  
-- ⚠️ Implemented anomaly detection to flag irregular inventory patterns  
+- 🤖 Designed a recommendation engine using 95+ real-world-inspired menu items based on predicted demand + inventory
 - 💬 Built a **feedback analyzer** using NLP (TF-IDF) for improving future recommendations  
 - 🌐 Created a **Streamlit web app** for real-time access and use  
-- 📦 Used GitHub for version control and collaboration  
-- 👥 Led a team of 4, serving as **Lead Developer and UI Designer**
-
+- 📦 Used GitHub for version control and collaboration
+  
 ---
 
 ## ✅ Key Features
 
-- 📅 **Demand Prediction** – ML-powered forecasts based on date, weather, and events  
-- 📋 **Menu Recommendations** – Suggest dishes based on available stock  
-- 📉 **Anomaly Alerts** – Detect unusual demand or stock behavior  
+- 📅 **Demand Prediction** – ML-powered forecasts based on historical sales data  
+- 📋 **Menu Recommendations** – Suggest dishes based on available inventory stock  
+- 📉 **Alert Mechanism** – notifies when inventory is low or items are near expiry 
 - 💬 **Feedback Analyzer** – Understand customer sentiment via NLP  
-- 🧠 **ML Integration** – Modular models: Random Forest, Isolation Forest, TF-IDF  
+- 🧠 **ML Integration** – Modular models: Random Forest and TF-IDF  
 - 🔗 **Scalable & Real-time** – Works with live inventory data and user inputs
 
 ---
