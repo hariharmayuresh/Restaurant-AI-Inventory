@@ -31,7 +31,7 @@ def home_page():
     
     st.markdown("---")
     
-    st.header("👤 Developed By")
+    st.header("Developed By")
     st.write("**Mayuresh Harihar**")
     st.markdown("Built as a solo project to explore AI-driven inventory optimization for restaurants.")
 
