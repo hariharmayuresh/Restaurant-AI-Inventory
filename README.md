@@ -51,14 +51,15 @@ The rising levels of food waste and inefficiencies in restaurant supply chains c
 
 ## 🛠️ Tools & Tech Used
 
-- **Python**  
+- **Python**
+- **Jupyter Notebook** – for data exploration and model development  
 - **Streamlit** – Web app framework  
 - **Scikit-learn** – ML model training  
-- **Pandas / NumPy** – Data processing  
+- **Pandas and NumPy** – Data processing  
 - **NLP** – TF-IDF, Bag-of-Words  
-- **Matplotlib / Seaborn** – Visualizations  
+- **Matplotlib and Seaborn** – Visualizations  
 - **Git & GitHub** – Version control  
-- **Google Colab / VS Code** – Development environment
+- **VS Code** – Development environment
 
 ---
 
